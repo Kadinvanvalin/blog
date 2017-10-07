@@ -1,0 +1,16 @@
+
+<% @posts.each do |post| %>
+<div class="post_wrapper">
+  <h2 class="title">
+    <%= link_to post.title, post %>
+  </h2>
+
+  <p class="date">
+    Submitted <%= post.created_at.strftime("%B, %d, %y") %> Ago
+  </p>
+
+  <p class="body">
+    <%= post.body %>
+  </p>
+</div>
+<% end %>
