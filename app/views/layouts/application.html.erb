@@ -23,7 +23,12 @@
         <li><a href="https://www.linkedin.com/in/kadin-van-valin/">Linkedin</a></li>
         <li> <a href="mailto:kadinvanvalin@gmail.com">Email</a> </li>
        </ul>
-       <p class="sign_in">admin login</p>
+       <% if current_user %>
+        Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+      <% else %>
+          <span class="sign_in"><%= link_to 'Login', '/login' %></span> | <%= link_to 'Signup', '/signup' %>
+      <% end %>
+
     </div>
 
     <div id="main_content">

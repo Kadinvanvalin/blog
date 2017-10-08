@@ -1,0 +1,10 @@
+<div id="page_wrapper">
+  <h2>Login</h2>
+  <%= form_tag '/login' do %>
+
+    Email: <%= text_field_tag :email %><br>
+    Password: <%= password_field_tag :password %>
+    <%= submit_tag "Submit" %>
+
+  <% end %>
+</div>

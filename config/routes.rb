@@ -6,4 +6,11 @@ Rails.application.routes.draw do
   root "posts#index"
 
   get '/about', to: 'pages#about'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/signup', to: 'users#new'
+  post '/users', to: 'users#create'
 end
